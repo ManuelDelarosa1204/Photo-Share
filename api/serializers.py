@@ -1,14 +1,13 @@
 __all__ = [
     "UserSerializer",
     "ImageSerializer",
-    "ImageLikesSerializer",
     "AlbumSerializer",
     "AlbumImageSerializer",
 ]
 
 from rest_framework import serializers
 from user.models import User
-from photos.models import Image, ImageLikes
+from photos.models import Image
 from album.models import Album, AlbumImage
 
 

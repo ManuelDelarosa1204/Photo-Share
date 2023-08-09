@@ -40,10 +40,10 @@
     only show public images.
     {% endcomment %}
         {% for image in public_images %}
-            <div class="card mb-4 text-center" style="width:18rem;">
+            <div class="card mb-4" style="width:18rem;">
                 <img src="{{ image.image.url }}" alt="{{ image.name }}" class="img-card-top">
                 <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title text-center">
                         {{ image.name }}
                     </h5>
                     <p class="card-text">
@@ -53,5 +53,4 @@
             </div>
         {% endfor %}
     {% endif %}
-
 {% endblock content %}

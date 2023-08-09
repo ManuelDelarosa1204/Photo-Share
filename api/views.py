@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 from user.models import User
 from photos.models import Image, ImageLikes
 from album.models import Album, AlbumImage
@@ -33,6 +34,7 @@ class ListAlbumsView(generics.ListAPIView):
 class SingleAlbumView(generics.RetrieveAPIView):
     queryset = Album.objects.all()
     serializer_class = serializers.AlbumSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class ListAlbumImagesView(generics.ListAPIView):

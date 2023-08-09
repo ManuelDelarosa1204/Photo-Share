@@ -10,12 +10,6 @@ urlpatterns = [
     path("image/<int:pk>/", views.SingleImageView.as_view(), name="single-image"),
     path("albums/", views.ListAlbumsView.as_view(), name="list-albums"),
     path("album/<int:pk>/", views.SingleAlbumView.as_view(), name="single-album"),
-    path(
-        "album-images/", views.ListAlbumImagesView.as_view(), name="list-album-images"
-    ),
-    path(
-        "album-image/<int:pk>/",
-        views.SingleAlbumImageView.as_view(),
-        name="single-album-image",
-    ),
+    path("album-images/", views.ListAlbumImagesView.as_view(), name="list-album-images"),
+    path("album-image/<int:pk>/", views.SingleAlbumImageView.as_view(), name="single-album-image"),
 ]

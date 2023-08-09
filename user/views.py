@@ -40,7 +40,5 @@ class ProfileView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Get public images from the owner of the profile
-        context["public_images"] = Image.objects.filter(user=self.get_object()).filter(
-            status=Image.Status.PUBLIC
-        )
+        context["public_images"] = Image.objects.filter(user=self.get_object()).filter(status=Image.Status.PUBLIC)
         return context
